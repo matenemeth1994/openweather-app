@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
+import styles from "./App.scss";
 import Header from "./Components/Header";
 import Weather from "./Components/Weather";
 import Search from "./Components/Search";
 import Forecast from "./Components/Forecast";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Card from 'react-bootstrap/Card'
+import Card from "react-bootstrap/Card";
+import Accordion from "react-bootstrap/Accordion";
+
 
 const location = "Bath";
 const defaultLocation = `https://api.openweathermap.org/data/2.5/weather?q=${location}&units=metric&appid=36c0bb9a4e7cb559940b1f4fd37fc78f`;
@@ -107,9 +109,20 @@ const App = () => {
               description={description}
               imgURL={imgURL}
             />
-            {weatherForecast.map((data) => (
-              <Forecast key={data.dt} data={data} />
-            ))}
+            <Accordion className={styles.accordion} defaultActiveKey="0">
+              <Card >
+                <Accordion.Toggle as={Card.Header} style={{ backgroundColor: "#fde7e2" }}  eventKey="1">
+                   Click on this header if you want to see 5 days weather forecast
+                </Accordion.Toggle>
+                <Accordion.Collapse  eventKey="1">
+                  <Card.Body style={{ backgroundColor: "#fde7e2" }} >
+                    {weatherForecast.map((data) => (
+                      <Forecast key={data.dt} data={data} />
+                    ))}
+                  </Card.Body>
+                </Accordion.Collapse>
+              </Card>
+            </Accordion>
           </>
         )}
       </div>

@@ -1,7 +1,24 @@
 .margin {
-    margin-top: 20px;
+  margin: 40px 0px;
+}
+
+.border {
+  border-radius: 10px;
+  outline: none;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 2px solid #e96e4d;
+  background-color: rgba(253, 231, 226, 0.6);
 }
 
 .button {
-    margin-left: 5px;
+  margin-left: 5px;
+  border-radius: 10px;
+  outline: none;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 2px solid #e96e4d;
+  background-color: #e96e4d;
+  color: #fde7e2;
+  cursor: pointer;
 }

@@ -4,7 +4,7 @@ import styles from "./Header.module.scss"
 const Header = (props) => {
   return (
     <header className={styles.header}>
-      <h2>{props.text}</h2>
+      <h2 className={styles.margin}>{props.text}</h2>
     </header>
   );
 };

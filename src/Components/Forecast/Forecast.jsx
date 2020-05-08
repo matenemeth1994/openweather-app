@@ -4,33 +4,30 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Card from "react-bootstrap/Card";
 
 const Forecast = ({ data }) => {
   const imgURLForecast = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
 
   return (
-    // <div className={styles.border}>
-    //   <img src={imgURLForecast} />
-    //   <p>{`${data.main.temp}°C`}</p>
-    //   <p>{data.weather[0].description}</p>
-    //   <p>{data.dt_txt}</p>
-    // </div>
+    <Card className={styles.outline}>
     <Container>
       <Row>
-        <Col>
-        <p>{data.dt_txt}</p>
+        <Col sm={3} className={styles.columns}>
+        <p className={styles.text} >{data.dt_txt}</p>
         </Col>
-        <Col>
-          <p>{`${data.main.temp}°C`}</p>
+        <Col sm={3} className={styles.columns}>
+          <p className={styles.text} >{`${data.main.temp}°C`}</p>
         </Col>
-        <Col>
-          <p>{data.weather[0].description}</p>
+        <Col sm={3} className={styles.columns}>
+          <p className={styles.text} >{data.weather[0].description}</p>
         </Col>
-        <Col>
+        <Col sm={3} className={styles.columns}>
           <img src={imgURLForecast} />
         </Col>
       </Row>
     </Container>
+    </Card>
   );
 };
 

@@ -6,7 +6,8 @@ const Search = (props) => {
 
   const handleSearchInputChanges = (event) => {
     const inputValue = event.target.value;
-    const cityNameCapitalized = inputValue.charAt(0).toUpperCase() + inputValue.slice(1);
+    const cityNameCapitalized =
+      inputValue.charAt(0).toUpperCase() + inputValue.slice(1);
     setSearchValue(cityNameCapitalized);
   };
 
@@ -27,6 +28,7 @@ const Search = (props) => {
         onChange={handleSearchInputChanges}
         type="text"
         placeholder="Search city or country"
+        className={styles.border}
       />
       <input
         className={styles.button}

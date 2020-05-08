@@ -1,0 +1,22 @@
+.App {
+  text-align: center;
+  font-family: "Ubuntu", sans-serif;
+  background: url(./weather-background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.accordion {
+  margin: 20px 40px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  cursor: pointer;
+}
+
+.accordionHeader {
+  background: none;
+  background-color: #fde7e2 !important;
+  background-color: transparent;
+}
